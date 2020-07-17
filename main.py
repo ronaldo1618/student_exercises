@@ -38,13 +38,13 @@ cohort_42.assign_student(shae)
 
 # Instructors Assigning Exercises
 joe.assign_exercises(ronnie, [student_exercise, petting_zoo])
-joe.assign_exercises(mark, [kandy_korner, daily_journal, petting_zoo])
+joe.assign_exercises(mark, [kandy_korner, daily_journal, petting_zoo, student_exercise])
 bry.assign_exercises(geoff, [student_exercise, petting_zoo])
 madi.assign_exercises(shae, [kandy_korner, daily_journal])
 
 # Find a better way to do the stuff below
 # Could just compare the exercises associated with each student directly
-# Instead of comparing students to exercises that they havent been assigned.
+# Instead of comparing students to exercises that they havent been assigned at all.
 students = list()
 exercises = list()
 students.extend([ronnie, mark, geoff, shae])
@@ -52,4 +52,5 @@ exercises.extend([student_exercise.name, petting_zoo.name, kandy_korner.name, da
 
 for student in students:
     working_on_exercises = list(set(student.exercises).intersection(set(exercises)))
+    working_on_exercises[-2] += ',' if len(working_on_exercises) > 2 else ''
     print(f'{student.first_name} is working on {", ".join(working_on_exercises[:-1])} and {working_on_exercises[-1]}.')
