@@ -1,7 +1,7 @@
 from exercise import Exercise
 from cohort import Cohort
-from student import Student
-from instructor import Instructor
+from NSSPerson import Student
+from NSSPerson import Instructor
 
 # Creating Exercises
 student_exercise = Exercise('Student Exercise', 'Python')
@@ -42,9 +42,7 @@ joe.assign_exercises(mark, [kandy_korner, daily_journal, petting_zoo, student_ex
 bry.assign_exercises(geoff, [student_exercise, petting_zoo])
 madi.assign_exercises(shae, [kandy_korner, daily_journal])
 
-# Find a better way to do the stuff below
-# Could just compare the exercises associated with each student directly
-# Instead of comparing students to exercises that they havent been assigned at all.
+# Find a better way
 students = list()
 exercises = list()
 students.extend([ronnie, mark, geoff, shae])
