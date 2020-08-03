@@ -1,0 +1,10 @@
+{
+  "sqltools.connections": [
+    {
+      "database": "studentexercises.db",
+      "driver": "SQLite",
+      "name": "student_exercises",
+      "previewLimit": 50
+    }
+  ]
+}
